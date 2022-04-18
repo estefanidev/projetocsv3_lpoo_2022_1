@@ -13,7 +13,9 @@ public class Jogador {
     private Calendar data_cadastro;
     private Calendar data_ultimo_login;
     private Endereco endereco; //Associação
-    private List<Patente> patentes; //Agregação
+    private List<Patente> patentes; //Agregação - é uma lista
+    private List<Artefato> artefatos //Agregação
+    private List<Compra> compras; //Agregação por composição
 
     public Jogador(){
 
@@ -47,6 +49,14 @@ public class Jogador {
         return patentes;
     }
 
+    public List<Artefato> getArtefatos(){
+        return artefatos;
+    }
+
+    public List<Compra> getCompras{
+        return compras;
+    }
+
     public void setNickname(String nickname){
         this.nickname = nickname;
     }
@@ -72,7 +82,15 @@ public class Jogador {
     }
 
     public void setPatentes(List<Patente> patentes){
-        this.patentes;
+        this.patentes = patentes;
+    }
+
+    public void setArtefatos(List<Artefato> artefatos){
+        this.artefatos = artefatos;
+    }
+
+    public void setCompras(List<Compra> compras){
+        this.compras = compras;
     }
 
 }
